@@ -111,21 +111,19 @@ public class JavaStringDemo {
          */
 
 
+
+        System.out.println("--------------------------------------------");
         String ss = "abc";
         String ss1 = "abc";
 
-        System.out.println(ss == ss1);
+        System.out.println(ss == ss1);//true
 
         String str = new String("hello");
         String str1 = new String("hello");
 
+        System.out.println(str == "hello");//false
 
-        System.out.println(str == "hello");
-
-        System.out.println(10 == 10.0);
-
-
-        System.out.println(str == str1);
+        System.out.println(str == str1);//false
 
 
         System.out.println("--------------------------------------------");
