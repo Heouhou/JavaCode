@@ -1,13 +1,12 @@
 package com.example.demo.test.JavaDemo;
 
 
-import javax.swing.text.Keymap;
 /**
  * @author houqingxin
  * @Description: java 基础
  * @date 2019-01-28 09:56
  */
-public class JAVA01 {
+public class JavaStringDemo {
 
 
     public static void main(String[] args) {
@@ -15,7 +14,6 @@ public class JAVA01 {
         // String Integet 等重写了 equals 方法,其他Object没有重写方法 ,用的还是 == 方法
 
 
-        Keymap map=null;
         /**
          *
          new Integer(123) 与 Integer.valueOf(123) 的区别在于：
@@ -128,5 +126,33 @@ public class JAVA01 {
 
 
         System.out.println(str == str1);
+
+
+        System.out.println("--------------------------------------------");
+
+
+/**
+ *
+ *
+ * 当一个字符串调用 intern() 方法时，如果 String Pool 中已经存在一个字符串和该字符串值相等（使用 equals() 方法进行确定）
+ * ，那么就会返回 String Pool 中字符串的引用；否则，就会在 String Pool 中添加一个新的字符串，并返回这个新字符串的引用。
+ */
+        String s1 = new String("aaa");
+        String s2 = new String("aaa");
+        System.out.println(s1 == s2);           // false
+        String s3 = s1.intern();
+        String s4 = s2.intern();
+
+
+
+
+        System.out.println(s3 == s4);
+
+
+
+
     }
+
+
+
 }
